@@ -1,0 +1,162 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Organization\create_organization.spec.js >> creating organization 4
+- Location: tests\Organization\create_organization.spec.js:68:5
+
+# Error details
+
+```
+Error: locator.fill: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('//input[@name="accountname"]')
+
+```
+
+```
+Error: expect(locator).toHaveText(expected) failed
+
+Locator: locator('//span[@id="dtlview_Organization Name"]')
+Expected: "UST664"
+Error: element(s) not found
+
+Call log:
+  - Expect "toHaveText" locator('//span[@id="dtlview_Organization Name"]') with timeout 5000ms
+  - waiting for locator('//span[@id="dtlview_Organization Name"]')
+    - waiting for "http://49.249.29.4:8888/index.php?module=Accounts&action=EditView&return_action=DetailView&parenttab=Marketing" navigation to finish...
+  - Target page, context or browser has been closed
+
+```
+
+```yaml
+- table:
+  - rowgroup:
+    - row "vtiger-crm-logo.gif Search... Find ACOE Fireflink":
+      - cell "vtiger-crm-logo.gif":
+        - img "vtiger-crm-logo.gif"
+      - cell "Search... Find":
+        - table:
+          - rowgroup:
+            - row "Search... Find":
+              - cell "Search...":
+                - textbox: Search...
+              - cell:
+                - link:
+                  - /url: javascript:void(0);
+                  - img
+              - cell "Find":
+                - button "Find"
+      - cell "ACOE Fireflink":
+        - table:
+          - rowgroup:
+            - row "ACOE Fireflink":
+              - cell "ACOE Fireflink"
+              - cell:
+                - img
+              - cell:
+                - img
+              - cell:
+                - img
+- table:
+  - rowgroup:
+    - row "Calendar Organizations Contacts Opportunities Products Documents Email Trouble Tickets Dashboard Leads More Quick Create...":
+      - cell:
+        - link:
+          - /url: index.php?module=Home&action=index&parenttab=My Home Page
+          - img
+      - cell "Calendar Organizations Contacts Opportunities Products Documents Email Trouble Tickets Dashboard Leads More Quick Create...":
+        - table:
+          - rowgroup:
+            - row "Calendar Organizations Contacts Opportunities Products Documents Email Trouble Tickets Dashboard Leads More Quick Create...":
+              - cell:
+                - img
+              - cell "Calendar":
+                - link "Calendar":
+                  - /url: index.php?module=Calendar&action=index
+              - cell:
+                - img
+              - cell "Organizations":
+                - link "Organizations":
+                  - /url: index.php?module=Accounts&action=index
+              - cell:
+                - img
+              - cell "Contacts":
+                - link "Contacts":
+                  - /url: index.php?module=Contacts&action=index
+              - cell:
+                - img
+              - cell "Opportunities":
+                - link "Opportunities":
+                  - /url: index.php?module=Potentials&action=index
+              - cell:
+                - img
+              - cell "Products":
+                - link "Products":
+                  - /url: index.php?module=Products&action=index
+              - cell:
+                - img
+              - cell "Documents":
+                - link "Documents":
+                  - /url: index.php?module=Documents&action=index
+              - cell:
+                - img
+              - cell "Email":
+                - link "Email":
+                  - /url: index.php?module=Emails&action=index
+              - cell:
+                - img
+              - cell "Trouble Tickets":
+                - link "Trouble Tickets":
+                  - /url: index.php?module=HelpDesk&action=index
+              - cell:
+                - img
+              - cell "Dashboard":
+                - link "Dashboard":
+                  - /url: index.php?module=Dashboard&action=index
+              - cell:
+                - img
+              - cell "Leads":
+                - link "Leads":
+                  - /url: index.php?module=Leads&action=index
+              - cell:
+                - img
+              - cell "More":
+                - link "More":
+                  - /url: javascript:;
+                  - text: More
+                  - img
+              - cell:
+                - img
+              - cell "Quick Create...":
+                - combobox:
+                  - option "Quick Create..." [selected]
+                  - option "New Organization"
+                  - option "New Asset"
+                  - option "New To Do"
+                  - option "New Campaign"
+                  - option "New Comment"
+                  - option "New Contact"
+                  - option "New Document"
+                  - option "New Event"
+                  - option "New Ticket"
+                  - option "New Lead"
+                  - option "New Opportunity"
+                  - option "New PriceBook"
+                  - option "New Product"
+                  - option "New Project"
+                  - option "New Project Milestone"
+                  - option "New Project Task"
+                  - option "New Service Contract"
+                  - option "New Service"
+                  - option "New Vendor"
+      - cell
+```
+
+```
+Error: browserContext.close: Target page, context or browser has been closed
+```
